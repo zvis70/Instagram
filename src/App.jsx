@@ -15,15 +15,15 @@ export function App() {
         <section className='main-grid-container'>
 
             <div className='grid-aside'>
-            <StoryIndex />
- {/* <MenuBar /> */}
+                {/* <StoryIndex /> */}
+                <MenuBar />
             </div>
 
             <div className='grid-main'>
                 <StoryIndex />
-             
+
             </div>
-            
+
         </section>
     )
 }
