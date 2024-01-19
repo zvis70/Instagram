@@ -13,17 +13,14 @@
 
 
 // Views
+@import "views/App.scss";
 @import "views/AboutUs";
-@import "views/HomePage";
-@import "views/CarIndex";
-@import "views/ReviewIndex";
-@import "views/UserDetails";
+@import "views/StoryIndex";
+@import "views/UserProfile";
 
 // Components
 @import "cmps/AppHeader";
 @import "cmps/AppFooter";
-@import "cmps/UserMsg";
-@import "cmps/ShoppingCart";
 
 
 

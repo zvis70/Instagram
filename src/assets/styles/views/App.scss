@@ -1,0 +1,25 @@
+.main-grid-container {
+    display: grid;
+    //border-style: solid;
+    //border-width: 0.5px;
+    //border: none;
+    //border-color: rgb(0, 0, 0);
+    /* grid-template-rows: 50px 70px 1fr 30px; */
+
+    grid-template-columns: 200px 1fr;
+    grid-template-areas:
+        'aside main'
+
+}
+
+
+.grid-aside {
+    grid-area: aside;
+    background-color: rgb(45, 251, 38);
+}
+
+.grid-main {
+    grid-area: main;
+    background-color: rgb(251, 215, 38);
+
+}

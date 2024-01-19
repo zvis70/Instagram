@@ -1,41 +1,55 @@
-import { HomePage } from './pages/HomePage.jsx'
-import { AboutUs } from './pages/AboutUs.jsx'
-import { CarIndex } from './pages/CarIndex.jsx'
-import { ReviewIndex } from './pages/ReviewIndex.jsx'
-import { ChatApp } from './pages/Chat.jsx'
-import { AdminApp } from './pages/AdminIndex.jsx'
+import { Home } from './pages/Home.jsx'
+import { Search } from './pages/Search.jsx'
+import { Explore } from './pages/Explore.jsx'
+import { Reels } from './pages/Reels.jsx'
+import { Massages } from './pages/Massages.jsx'
+import { Notifications } from './cmps/Notifications.jsx'
+import { CreateStory } from './pages/CreateStory.jsx'
+import { Profile } from './pages/Profile.jsx'
+
+
 
 // Routes accesible from the main navigation (in AppHeader)
 const routes = [
     {
         path: '/',
-        component: <HomePage />,
-        label: 'Home 🏠',
+        component: <Home />,
+        label: 'Home',
     },
     {
-        path: 'car',
-        component: <CarIndex />,
-        label: 'Cars'
+        path: 'search',
+        component: <Search />,
+        label: 'Search'
     },
     {
-        path: 'review',
-        component: <ReviewIndex />,
-        label: 'Reviews'
+        path: 'explore',
+        component: <Explore />,
+        label: 'Explore'
     },
     {
-        path: 'chat',
-        component: <ChatApp />,
-        label: 'Chat'
+        path: 'reels',
+        component: <Reels />,
+        label: 'Reels'
     },
     {
-        path: 'about',
-        component: <AboutUs />,
-        label: 'About us'
+        path: 'massages',
+        component: <Massages />,
+        label: 'Massages'
     },
     {
-        path: 'admin',
-        component: <AdminApp />,
-        label: 'Admin Only'
+        path: 'notifications',
+        component: <Notifications />,
+        label: 'Notifications'
+    },
+    {
+        path: 'create',
+        component: <CreateStory />,
+        label: 'Create'
+    },
+    {
+        path: 'profile',
+        component: <Profile />,
+        label: 'Profile'
     }
 ]
 
