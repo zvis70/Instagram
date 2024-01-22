@@ -1,17 +1,11 @@
 .main-grid-container {
+    min-height: 100vh;
     display: grid;
-    //border-style: solid;
-    //border-width: 0.5px;
-    //border: none;
-    //border-color: rgb(0, 0, 0);
-    /* grid-template-rows: 50px 70px 1fr 30px; */
-
     grid-template-columns: 200px 1fr;
-    grid-template-areas:
-        'aside main'
+   grid-template-areas:
+       'aside main'
 
 }
-
 
 .grid-aside {
     grid-area: aside;

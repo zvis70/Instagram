@@ -1,10 +1,9 @@
 
 import * as React from 'react'
 import { Box, styled, List, ListItem } from '@mui/material'
-
-
 import { MENU_ITEMS_LIST } from '../config/menu.itemslist';
-
+import { svgService } from '../config/svg.service';
+// import { Instagram } from '@mui/icons-material';
 
 const Container = styled(Box)({
   padding: 8,
@@ -19,18 +18,13 @@ const Container = styled(Box)({
     marginRight: 20
   }
 
-
 })
 
 export function MenuBarPreview() {
-
-    
- 
-  return (
+   
+   return (
     <Container>
-
-      <div> hello From Menu Preview</div>   
-     
+      <img src={svgService.getSvg('instagram')}></img>
       <List >
         {
           MENU_ITEMS_LIST.map(data => (

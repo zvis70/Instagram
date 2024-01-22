@@ -2,21 +2,16 @@
 //import { useSelector } from 'react-redux'
 //import { loadCars, addCar, updateCar, removeCar, addToCart } from '../store/car.actions.js'
 
-import { StoryList } from "./StoryList";
-
-
-
-
+import { StoryList } from "../cmps/StoryList";
 
 export function StoryIndex() {
 
     return (
         <div>
-            
-            <main>
-                Hello From StoryIndex
+                     
+            Hello From StoryIndex
             <StoryList />
-            </main>
+          
         </div>
     )
 }

@@ -6,24 +6,21 @@ import React from 'react'
 // import { AppHeader } from './cmps/AppHeader'
 // import { AppFooter } from './cmps/AppFooter'
 // import { Profile } from './pages/Profile'
-import { StoryIndex } from './cmps/StoryIndex'
+//import { StoryIndex } from './views/StoryIndex'
 import { MenuBar } from './cmps/MenuBar'
+import { StoryIndex } from './pages/StoryIndex'
+// import { AppFooter } from './cmps/AppFooter'
+
 
 export function App() {
 
     return (
         <section className='main-grid-container'>
 
-            <div className='grid-aside'>
-                {/* <StoryIndex /> */}
-                <MenuBar />
-            </div>
-
-            <div className='grid-main'>
-                <StoryIndex />
-
-            </div>
-
+            <MenuBar className='grid-aside' />
+          
+            <StoryIndex className='grid-main' />
+            {/* <AppFooter className='grid-main'/> */}
         </section>
     )
 }

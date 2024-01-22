@@ -5,7 +5,8 @@ export const utilService = {
     debounce,
     randomPastTime,
     saveToStorage,
-    loadFromStorage
+    loadFromStorage,
+    getIcons
 }
 
 function makeId(length = 6) {
@@ -62,3 +63,7 @@ function loadFromStorage(key) {
     return (data) ? JSON.parse(data) : undefined
 }
 
+function getIcons(iconName) {
+const a=         
+
+}
