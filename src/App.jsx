@@ -9,6 +9,7 @@ import React from 'react'
 //import { StoryIndex } from './views/StoryIndex'
 import { MenuBar } from './cmps/MenuBar'
 import { StoryIndex } from './pages/StoryIndex'
+import { AppHeader } from './cmps/AppHeader'
 // import { AppFooter } from './cmps/AppFooter'
 
 
@@ -18,8 +19,10 @@ export function App() {
         <section className='main-grid-container'>
 
             <MenuBar className='grid-aside' />
-          
+            <AppHeader />
             <StoryIndex className='grid-main' />
+            <AppHeader />
+
             {/* <AppFooter className='grid-main'/> */}
         </section>
     )

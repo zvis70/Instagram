@@ -93,5 +93,94 @@ function getLoggedinUser() {
 //     await userService.signup({fullname: 'Muki G', username: 'muki', password:'123', score: 10000})
 // })()
 
-
+const users = [
+    {
+    _id: "u101",
+    username: "u101",
+    password: "mukmuk",
+    fullname: "John Smith",
+    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/w9bbfi5coafses2hgmtg.avif",
+    following: [
+      {
+        _id: "u106",
+        fullname: "Leonardo D",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+      }
+    ],
+    followers: [
+      {
+        _id: "u105",
+        fullname: "Bob M",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+      }
+    ],
+    savedStoryIds: ["s104", "s111", "s123"] // even better - use mini-story
+  },
+  {
+    _id: "u102",
+    username: "u102",
+    password: "MushMush",
+    fullname: "Izik Newton",
+    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/w9bbfi5coafses2hgmtg.avif",
+    following: [
+      {
+        _id: "u106",
+        fullname: "Leonardo D",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+      }
+    ],
+    followers: [
+      {
+        _id: "u105",
+        fullname: "Bob M",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+      }
+    ],
+    savedStoryIds: ["s104", "s111", "s123"] // even better - use mini-story
+  },
+  {
+    _id: "u105",
+    username: "Mush",
+    password: "MushMush",
+    fullname: "Newton Junior",
+    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/w9bbfi5coafses2hgmtg.avif",
+    following: [
+      {
+        _id: "u106",
+        fullname: "Leonardo D",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+      }
+    ],
+    followers: [
+      {
+        _id: "u105",
+        fullname: "Bob M",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+      }
+    ],
+    savedStoryIds: ["s104", "s111", "s123"] // even better - use mini-story
+  },
+  {
+    _id: "u106",
+    username: "u106",
+    password: "MushMush",
+    fullname: "Izik Newton",
+    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/w9bbfi5coafses2hgmtg.avif",
+    following: [
+      {
+        _id: "u106",
+        fullname: "Leonardo D",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+      }
+    ],
+    followers: [
+      {
+        _id: "u105",
+        fullname: "Bob M",
+        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+      }
+    ],
+    savedStoryIds: ["s104", "s111", "s123"] // even better - use mini-story
+  },
+  ]
 

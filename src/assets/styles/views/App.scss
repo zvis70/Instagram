@@ -1,11 +1,14 @@
 .main-grid-container {
     min-height: 100vh;
     display: grid;
+    grid-template-rows: 80px 1fr;
     grid-template-columns: 200px 1fr;
-   grid-template-areas:
-       'aside main'
+    grid-template-areas:
+        'aside header'
+        'aside main'
 
 }
+
 
 .grid-aside {
     grid-area: aside;

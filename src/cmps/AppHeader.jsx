@@ -5,9 +5,8 @@
 
 export function AppHeader() {
     return (
-        <header className="app-header">
-            <h1>
-                Hello From AppHeader</h1>
+        <header className="grid-header">
+            Hello From AppHeader
         </header>
     )
 }
