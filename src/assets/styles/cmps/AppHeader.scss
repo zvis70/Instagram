@@ -1,13 +1,21 @@
 .grid-header {
     grid-area: header;
-    display: flex;
+    // display: flex;
     justify-content: center;
     align-items: center;
-    border: solid;
-    border-color: #bcbcbc;
+    //border: solid;
+    //border-color: #bcbcbc;
+    min-height: fit-content;
     
 //     background-color: $clr4;
 //     padding: 10px;
+
+}
+.sample-header{
+max-width: 30vw;
+max-height: 30vh;
+
+
 
 }
 

@@ -11,6 +11,7 @@ export const storyService = {
     save,
     remove,
     getEmptyStory,
+    getDefaultFilter,
     addStoryMsg
 }
 window.cs = storyService
@@ -63,6 +64,19 @@ async function addStoryMsg(storyId, txt) {
     await storageService.put(STORAGE_KEY, story)
 
     return msg
+}
+
+
+function getDefaultFilter() {
+    return {
+        _id: '',
+        txt: '',
+        imgUrl: '',
+        /* type: '',
+        minBatteryStatus: 0,
+        maxBattery: '',
+        model: '' */
+    }
 }
 //////////////////// DO TO LATER ///////////////////////////////// 
 function getEmptyStory() {

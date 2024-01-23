@@ -1,12 +1,11 @@
-import { carService } from '../services/story.service.local.js'
+import { storyService } from '../services/story.service.local.js'
 import { userService } from '../services/user.service.js'
 import { store } from './store.js'
-import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 import { ADD_STORY, /* ADD_TO_CART, */ CLEAR_CART, REMOVE_STORY, /* REMOVE_FROM_CART, */ SET_STORIES, UNDO_REMOVE_STORY, UPDATE_STORY } from './story.reducer.js'
 import { SET_SCORE } from './user.reducer.js'
 
 // Action Creators:
-export function getActionRemoveCar(storyId) {
+export function getActionRemoveStory(storyId) {
     return {
         type: REMOVE_STORY,
         storyId
@@ -18,7 +17,7 @@ export function getActionAddStory(story) {
         story
     }
 }
-export function getActionUpdateCar(story) {
+export function getActionUpdateStory(story) {
     return {
         type: UPDATE_STORY,
         story
@@ -41,7 +40,7 @@ export async function loadStories() {
 
 }
 
-export async function removeCar(storyId) {
+export async function removeStory(storyId) {
     try {
         await storyService.remove(storyId)
         store.dispatch(getActionRemoveStory(storyId))
@@ -54,7 +53,7 @@ export async function removeCar(storyId) {
 export async function addStory(story) {
     try {
         const savedStory = await storyService.save(story)
-        console.log('Added Car', savedCar)
+        console.log('Added Story', savedStory)
         store.dispatch(getActionAddStory(savedStory))
         return savedStory
     } catch (err) {
@@ -63,11 +62,11 @@ export async function addStory(story) {
     }
 }
 
-export function updateCar(story) {
+export function updateStory(story) {
     return storyService.save(story)
         .then(savedStory => {
             console.log('Updated Story:', savedStory)
-            store.dispatch(getActionUpdateCar(savedStory))
+            store.dispatch(getActionUpdateStory(savedStory))
             return savedStory
         })
         .catch(err => {
@@ -105,14 +104,14 @@ export async function checkout(total) {
 
 // Demo for Optimistic Mutation 
 // (IOW - Assuming the server call will work, so updating the UI first)
-export function onRemoveCarOptimistic(storyId) {
+export function onRemoveStoryOptimistic(storyId) {
     store.dispatch({
         type: REMOVE_STORY,
         storyId
     })
     showSuccessMsg('Story removed')
 
-    carService.remove(storyId)
+    storyService.remove(storyId)
         .then(() => {
             console.log('Server Reported - Deleted Succesfully');
         })

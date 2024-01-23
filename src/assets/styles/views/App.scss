@@ -1,5 +1,6 @@
 .main-grid-container {
     min-height: 100vh;
+    min-width: 100vw;
     display: grid;
     grid-template-rows: 80px 1fr;
     grid-template-columns: 200px 1fr;
