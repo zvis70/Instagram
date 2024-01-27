@@ -1,23 +1,39 @@
 .main-grid-container {
+    padding: 0px;
+    margin: 0px;
     min-height: 100vh;
     min-width: 100vw;
+
     display: grid;
-    grid-template-rows: 80px 1fr;
     grid-template-columns: 200px 1fr;
     grid-template-areas:
-        'aside header'
         'aside main'
 
 }
 
 
-.grid-aside {
+.grid-aside-areas {
+    padding: 0px;
+    margin: 0px;
     grid-area: aside;
     background-color: rgb(45, 251, 38);
 }
 
-.grid-main {
+.grid-main-area {
+    padding: 0px;
+    margin: 0px;
     grid-area: main;
-    background-color: rgb(251, 215, 38);
+    //background-color: rgb(251, 215, 38);
 
+}
+
+.svg-icon-div-position {
+    display: flex;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.svg-icon-position{
+    display: flex;
+    padding: 20px;
 }

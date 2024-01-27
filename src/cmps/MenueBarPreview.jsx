@@ -4,6 +4,7 @@ import { Box, styled, List, ListItem } from '@mui/material'
 import { MENU_ITEMS_LIST } from '../config/menu.itemslist';
 import { svgService } from '../config/svg.service';
 // import { Instagram } from '@mui/icons-material';
+import { SvgComponent } from './SvgComponent';
 
 const Container = styled(Box)({
   padding: 8,
@@ -21,24 +22,26 @@ const Container = styled(Box)({
 })
 
 export function MenuBarPreview() {
-   
-   return (
+
+  return (
     <Container>
-      <img src={svgService.getSvg('instagram')}></img>
+      
+      <SvgComponent svgName={'instagram_logo'} />
+      <SvgComponent svgName={'instagram'} />
+      {/* <div className='svg-icon-div-position'> <SvgComponent svgName={'home'} className='svg-icon-position'/> Home </div> */}
       <List >
         {
-          MENU_ITEMS_LIST.map(data => (
-            <ListItem  key = {data.name} >
-              <data.icon fontSize='small' />  
-              {data.title}
+          MENU_ITEMS_LIST.map(icons => (
+            <ListItem key={icons.name} >
+              <icons.icon fontSize='small' />
+              {icons.title}
 
             </ListItem>
           ))
 
         }
       </List>
-      
+
     </Container>
   )
-
 }

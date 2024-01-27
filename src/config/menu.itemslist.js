@@ -1,27 +1,26 @@
 //import React from 'react'
-import {Photo, StarOutline, SendOutlined, InsertDriveFileOutlined, DeleteOutlined,
-    MailOutlined, } from "@mui/icons-material"
-   
-    export const MENU_ITEMS_LIST = [
-    {
-        name: 'instagram',
-        title: 'Instagram',
-        icon:Photo
-    },
+import {
+    Photo, StarOutline, SendOutlined, InsertDriveFileOutlined, DeleteOutlined,
+    MailOutlined, Instagram, Home, Search, Explore, Note, Create, AccountBox,Menu} from "@mui/icons-material"
+
+    import { SvgComponent } from "../cmps/SvgComponent";
+
+
+export const MENU_ITEMS_LIST = [
     {
         name: 'home',
         title: 'Home',
-        icon: Photo
+        icon: Home
     },
     {
         name: 'search',
         title: 'Search',
-        icon: StarOutline
+        icon: Search
     },
     {
         name: 'explore',
         title: 'Explore',
-        icon: SendOutlined
+        icon: Explore
     },
     {
         name: 'reels',
@@ -32,7 +31,7 @@ import {Photo, StarOutline, SendOutlined, InsertDriveFileOutlined, DeleteOutline
     {
         name: 'massages',
         title: 'Massages',
-        icon: DeleteOutlined
+        icon: MailOutlined
     },
     {
         name: 'notifications',
@@ -42,16 +41,16 @@ import {Photo, StarOutline, SendOutlined, InsertDriveFileOutlined, DeleteOutline
     {
         name: 'create',
         title: 'Create',
-        icon: MailOutlined
+        icon: Create
     },
     {
         name: 'profile',
         title: 'Profile',
-        icon: MailOutlined
+        icon: AccountBox
     },
     {
         name: 'more',
         title: 'More',
-        icon: MailOutlined
+        icon: Menu
     }
 ];

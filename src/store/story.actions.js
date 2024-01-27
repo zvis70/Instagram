@@ -2,7 +2,7 @@ import { storyService } from '../services/story.service.local.js'
 import { userService } from '../services/user.service.js'
 import { store } from './store.js'
 import { ADD_STORY, /* ADD_TO_CART, */ CLEAR_CART, REMOVE_STORY, /* REMOVE_FROM_CART, */ SET_STORIES, UNDO_REMOVE_STORY, UPDATE_STORY } from './story.reducer.js'
-import { SET_SCORE } from './user.reducer.js'
+// import { SET_SCORE } from './user.reducer.js'
 
 // Action Creators:
 export function getActionRemoveStory(storyId) {

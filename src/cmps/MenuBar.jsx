@@ -5,7 +5,7 @@ import { MenuBarPreview } from './MenueBarPreview'
 
 export function MenuBar() {
     return (
-        <div>
+        <div >
             <Drawer anchor='left'
                 open={true}
                 hideBackdrop={true}
@@ -16,6 +16,7 @@ export function MenuBar() {
                 sx={{
                     '& .MuiDrawer-paper': {
                         //marginTop: '64px',
+                        // color: '#0000000',
                         width: '200px',
                         background: '#f5f5f5',
                         // borderRight: 'none',

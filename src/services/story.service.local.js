@@ -14,18 +14,19 @@ export const storyService = {
     getDefaultFilter,
     addStoryMsg
 }
-window.cs = storyService
+//window.cs = storyService
 
+_createStories()
 
 async function query(filterBy = { txt: '', price: 0 }) {
     var stories = await storageService.query(STORAGE_KEY)
-    if (filterBy.txt) {
-        const regex = new RegExp(filterBy.txt, 'i')
-        stories = stories.filter(story => regex.test(story.vendor) || regex.test(story.description))
-    }
-    if (filterBy.price) {
-        stories = stories.filter(story => story.price <= filterBy.price)
-    }
+    // if (filterBy.txt) {
+    //     const regex = new RegExp(filterBy.txt, 'i')
+    //     stories = stories.filter(story => regex.test(story.vendor) || regex.test(story.description))
+    // }
+    // if (filterBy.price) {
+    //     stories = stories.filter(story => story.price <= filterBy.price)
+    // }
     return stories
 }
 
@@ -71,17 +72,18 @@ function getDefaultFilter() {
     return {
         _id: '',
         txt: '',
-        imgUrl: '',
         /* type: '',
         minBatteryStatus: 0,
         maxBattery: '',
         model: '' */
     }
 }
+
+
 //////////////////// DO TO LATER ///////////////////////////////// 
 function getEmptyStory() {
     return {
-       // vendor: 'Susita-' + (Date.now() % 1000),
+        // vendor: 'Susita-' + (Date.now() % 1000),
         //price: utilService.getRandomIntInclusive(1000, 9000),
     }
 }
@@ -91,5 +93,177 @@ function getEmptyStory() {
 // storageService.post(STORAGE_KEY, {vendor: 'Subali Rahok 2', price: 980}).then(x => console.log(x))
 
 
-
-
+function _createStories() {
+    let stories = utilService.loadFromStorage(STORAGE_KEY)
+    if (!stories || !stories.length) {
+        stories = [
+            {
+                _id: "s101",
+                txt: "Best trip ever",
+                imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705610789/cld-sample-3.jpg", //an array for a few pictures 
+                by: {
+                    _id: "u101",
+                    fullname: "Alon Cohen",
+                    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705610752/sample.jpg"
+                },
+                loc: {
+                    lat: 32.109,
+                    lng: 34.855,
+                    name: "Tel Aviv"
+                },
+                comments: [
+                    {
+                        id: "c1001",
+                        by: {
+                            _id: "u105",
+                            fullname: "Bob M",
+                            imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                        },
+                        txt: "good one!",
+                        likedBy: [
+                            {
+                                "_id": "u105",
+                                "fullname": "Bob M",
+                                "imgUrl": "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                            }
+                        ]
+                    },
+                    {
+                        id: "c1002",
+                        by: {
+                            _id: "u106",
+                            fullname: "Leonardo D",
+                            imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+                        },
+                        txt: "not good!",
+                    }
+                ],
+                likedBy: [
+                    {
+                        _id: "u105",
+                        fullname: "Bob M",
+                        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                    },
+                    {
+                        _id: "u106",
+                        fullname: "Leonardo D",
+                        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+                    }
+                ],
+                tags: ["fun", "romantic"]
+            },
+            {
+                _id: "s102",
+                txt: "Best trip ever",
+                imgUrl: 'https://res.cloudinary.com/dvzrhwosk/image/upload/v1705610752/sample.jpg', //an array for a few pictures 
+                by: {
+                    _id: "u102",
+                    fullname: "Elton John",
+                    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/w9bbfi5coafses2hgmtg.avif"
+                },
+                loc: {
+                    lat: 32.109,
+                    lng: 34.855,
+                    name: "Tel Aviv"
+                },
+                comments: [
+                    {
+                        id: "c1012",
+                        by: {
+                            _id: "u105",
+                            fullname: "Bob M",
+                            imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                        },
+                        txt: "good one!",
+                        likedBy: [
+                            {
+                                "_id": "u105",
+                                "fullname": "Bob M",
+                                "imgUrl": "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                            }
+                        ]
+                    },
+                    {
+                        id: "c1013",
+                        by: {
+                            _id: "u106",
+                            fullname: "Leonardo D",
+                            imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+                        },
+                        txt: "not good!",
+                    }
+                ],
+                likedBy: [
+                    {
+                        _id: "u105",
+                        fullname: "Bob M",
+                        imgUrl: 'https://res.cloudinary.com/dvzrhwosk/image/upload/v1705610752/sample.jpg'
+                    },
+                    {
+                        _id: "u106",
+                        fullname: "Leonardo D",
+                        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+                    }
+                ],
+                tags: ["fun", "romantic"]
+            },
+            {
+                _id: "s103",
+                txt: "Best trip ever",
+                imgUrl: 'https://res.cloudinary.com/dvzrhwosk/image/upload/v1705610752/sample.jpg', //an array for a few pictures 
+                by: {
+                    _id: "u105",
+                    fullname: "Alon Cohen",
+                    imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/w9bbfi5coafses2hgmtg.avif"
+                },
+                loc: {
+                    lat: 32.109,
+                    lng: 34.855,
+                    name: "Tel Aviv"
+                },
+                comments: [
+                    {
+                        id: "c1012",
+                        by: {
+                            _id: "u105",
+                            fullname: "Bob M",
+                            imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                        },
+                        txt: "good one!",
+                        likedBy: [
+                            {
+                                "_id": "u105",
+                                "fullname": "Bob M",
+                                "imgUrl": "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif"
+                            }
+                        ]
+                    },
+                    {
+                        id: "c1013",
+                        by: {
+                            _id: "u106",
+                            fullname: "Leonardo D",
+                            imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+                        },
+                        txt: "not good!",
+                    }
+                ],
+                likedBy: [
+                    {
+                        _id: "u105",
+                        fullname: "Bob M",
+                        imgUrl: 'https://res.cloudinary.com/dvzrhwosk/image/upload/v1705610752/sample.jpg'
+                    },
+                    {
+                        _id: "u106",
+                        fullname: "Leonardo D",
+                        imgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621520/ysjamm1btzcm7ryldehw.avif"
+                    }
+                ],
+                tags: ["fun", "romantic"]
+            },
+            
+        ]
+        utilService.saveToStorage(STORAGE_KEY, stories)
+    }
+}

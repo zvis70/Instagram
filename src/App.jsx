@@ -1,30 +1,19 @@
 import React from 'react'
-//import { Routes, Route } from 'react-router'
-
-// import routes from './routes'
-
-// import { AppHeader } from './cmps/AppHeader'
-// import { AppFooter } from './cmps/AppFooter'
-// import { Profile } from './pages/Profile'
-//import { StoryIndex } from './views/StoryIndex'
+import { Route, Routes } from 'react-router-dom';
 import { MenuBar } from './cmps/MenuBar'
 import { StoryIndex } from './pages/StoryIndex'
-import { AppHeader } from './cmps/AppHeader'
-// import { AppFooter } from './cmps/AppFooter'
-
 
 export function App() {
 
     return (
-        <section className='main-grid-container'>
-
-            <MenuBar className='grid-aside' />
-            <AppHeader />
-            <StoryIndex className='grid-main' />
-            <AppHeader />
-
-            {/* <AppFooter className='grid-main'/> */}
+        <section className='main-app main-grid-container'>
+            <MenuBar className='grid-aside-areas' />
+            <Routes>
+                <Route path="/" element={<StoryIndex />} />
+                {/* <Route path="/stories" element={<StoryIndex />} /> */}
+            </Routes>
         </section>
+
     )
 }
 
