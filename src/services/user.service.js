@@ -11,7 +11,8 @@ export const userService = {
     getById,
     remove,
     update,
-    changeScore
+    changeScore,
+
 }
 
 window.userService = userService
@@ -83,12 +84,26 @@ function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER))
 }
 
+// function loggedInUser() {
+    
+//   const loggedUser = { 
+//       currentUserId: "u105", 
+//       currentUserName: "bob_m_55", 
+//       currentUserFullName: "Bob Marley", 
+//       currentUserImgUrl: "https://res.cloudinary.com/dvzrhwosk/image/upload/v1705621521/aeae5m1qhzebjs7qehl4.avif" }     
+
+//   return (loggedUser)        
+    
+// }
+
+  
 
 // ;(async ()=>{
 //     await userService.signup({fullname: 'Puki Norma', username: 'puki', password:'123',score: 10000, isAdmin: false})
 //     await userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 10000, isAdmin: true})
 //     await userService.signup({fullname: 'Muki G', username: 'muki', password:'123', score: 10000})
 // })()
+
 
 const users = [
     {

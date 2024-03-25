@@ -5,3 +5,37 @@
         background-size: contain;
     }
 }
+
+.story-details-container {
+    display: grid;
+    padding: 32px 20px 0;
+    margin: 0 25px;
+    justify-content: center;
+    grid-template-columns: 1fr 335px;
+    grid-template-areas:
+        'story-media story-comments';
+
+}
+
+.story-details-media {
+    grid-area: story-media;
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    // background-color: black;
+}
+
+.story-details-comments {
+    grid-area: story-comments;
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // background-color: rgb(196, 32, 32);
+}
+
+// 'story-media story-comments'
+// 'story-media story-actions'
+// 'story-media story-add-comment'

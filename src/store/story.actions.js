@@ -1,8 +1,7 @@
 import { storyService } from '../services/story.service.local.js'
 import { userService } from '../services/user.service.js'
 import { store } from './store.js'
-import { ADD_STORY, /* ADD_TO_CART, */ CLEAR_CART, REMOVE_STORY, /* REMOVE_FROM_CART, */ SET_STORIES, UNDO_REMOVE_STORY, UPDATE_STORY } from './story.reducer.js'
-// import { SET_SCORE } from './user.reducer.js'
+import { /* ADD_LIKE, */ ADD_STORY, REMOVE_STORY, SET_STORIES, UPDATE_STORY } from './story.reducer.js'
 
 // Action Creators:
 export function getActionRemoveStory(storyId) {
@@ -11,6 +10,13 @@ export function getActionRemoveStory(storyId) {
         storyId
     }
 }
+// export function getActionAddLike (storyId) {
+//     return {
+//       type: ADD_LIKE,
+//         storyId      
+//     }
+//   }
+
 export function getActionAddStory(story) {
     return {
         type: ADD_STORY,
@@ -89,17 +95,17 @@ export function updateStory(story) {
 //     })
 // }
 
-export async function checkout(total) {
-    try {
-        const score = await userService.changeScore(-total)
-        store.dispatch({ type: SET_SCORE, score })
-        store.dispatch({ type: CLEAR_CART })
-        return score
-    } catch (err) {
-        console.log('StoryActions: err in checkout', err)
-        throw err
-    }
-}
+// export async function checkout(total) {
+//     try {
+//         const score = await userService.changeScore(-total)
+//         store.dispatch({ type: SET_SCORE, score })
+//         store.dispatch({ type: CLEAR_CART })
+//         return score
+//     } catch (err) {
+//         console.log('StoryActions: err in checkout', err)
+//         throw err
+//     }
+// }
 
 
 // Demo for Optimistic Mutation 

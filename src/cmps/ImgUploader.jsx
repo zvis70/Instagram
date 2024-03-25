@@ -4,8 +4,8 @@ import { uploadService } from '../services/upload.service'
 export function ImgUploader({ onUploaded = null }) {
   const [imgData, setImgData] = useState({
     imgUrl: null,
-    height: 500,
-    width: 500,
+     height: 700,
+     width: 700,
   })
   const [isUploading, setIsUploading] = useState(false)
 
@@ -18,7 +18,7 @@ export function ImgUploader({ onUploaded = null }) {
   }
 
   function getUploadLabel() {
-    if (imgData.imgUrl) return 'Upload Another?'
+    if (imgData.imgUrl) return  'Change Img'//'Upload Another?'
     return isUploading ? 'Uploading....' : 'Upload Image'
   }
 

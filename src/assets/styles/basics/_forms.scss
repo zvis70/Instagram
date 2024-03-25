@@ -1,7 +1,8 @@
 button {
     border:0;
-    background-color: $clr1;
-    color:whitesmoke;
+    //background-color: $clr1;
+    color: black;
+    // color:whitesmoke;
     padding: 5px 10px;
     margin: 5px;
     cursor: pointer;
@@ -20,6 +21,6 @@ form > * {
     transition: .5s;
 }
 .btn-link:hover {
-    background-color: $clr1;
+    // background-color: $clr1;
     transform: scale(1.1);
 }

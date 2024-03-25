@@ -7,12 +7,20 @@ export const storyService = {
     remove,
     getById,
     createStory,
-    getDefaultFilter
+    getDefaultFilter,
+    // getEmptyStory
 }
 
 const STORAGE_KEY = 'stories'
 
-
+// function getEmptyStory() {
+//     return {
+//         _id: '',
+//         txt: '',
+//         imgUrl: '',
+                
+//     }
+// }
 
 async function query(filterBy) {
     let stories = await storageService.query(STORAGE_KEY)

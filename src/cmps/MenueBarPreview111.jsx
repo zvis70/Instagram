@@ -28,7 +28,8 @@ export function MenuBarPreview() {
       
       <SvgComponent svgName={'instagram_logo'} />
       <SvgComponent svgName={'instagram'} />
-      {/* <div className='svg-icon-div-position'> <SvgComponent svgName={'home'} className='svg-icon-position'/> Home </div> */}
+      
+      <div className='svg-icon-div-position'> <SvgComponent svgName={'home'} className='svg-icon-position'/> Home </div>
       <List >
         {
           MENU_ITEMS_LIST.map(icons => (

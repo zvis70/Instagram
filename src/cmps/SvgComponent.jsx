@@ -9,6 +9,6 @@ export  const SvgComponent = ({ svgName }) => {
 
     return (
         // <div>SvgComponent</div>
-        <div dangerouslySetInnerHTML={{ __html: svgContent }} />
+        <div className='svg-div-component like-icon' dangerouslySetInnerHTML={{ __html: svgContent }} />
   )
 }

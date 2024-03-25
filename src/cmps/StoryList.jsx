@@ -1,22 +1,25 @@
 import React from 'react'
 import { StoryPreview } from './StoryPreview'
 
-export function StoryList({ stories, onRemoveStory }) {
+export function StoryList({ stories, onRemoveStory,onAddLike }) {
   return (
     <div>
+      <article className='story-item'>
       <ul className="story-list">  {/*not define yet*/}
         {stories.map(story =>
-          <article className='story-item'>
+          
             <li key={story._id}>
-              <StoryPreview story={story} />
+              <StoryPreview story={story}    onAddLike={onAddLike} onRemoveStory={onRemoveStory} onRemoveStory={onRemoveStory}/>
               
               <div className="story-actions">  {/*not define yet*/}
                 {/* <button onClick={() => onRemoveStory(story._id)}>X</button> */}
               </div>
             </li>
-            </article>
+            
         )}
           </ul>
+          </article>
     </div>
   )
 }
+

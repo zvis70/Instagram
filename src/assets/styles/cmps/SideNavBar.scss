@@ -1,0 +1,146 @@
+.instagram-logo-container {
+  display: flex;
+  align-items: center;
+  padding: 25px 12px 16px;
+  margin: 0 0 19px;
+  height: 90px;
+  width: 220px;
+
+  // .svg-icon-div-position {
+  //   display: flex;
+  //   padding: 20px;
+  //   margin-right: 20px;
+  //   height: 24px;
+  // }
+
+  // .svg-icon-position {
+  //   display: flex;
+  //   padding: 20px;
+
+  // }
+  // .svg-div-component{
+  //   display: flex;
+  //   height: 24px;
+
+  // }
+
+}
+
+.sidenavbar-links-names-position {
+  display: flex;
+  padding-left: 16px;
+  align-items: center;
+  height: 24px;
+}
+
+.sidenavbar-container {
+  display: grid;
+  padding: 8px 10px 15px 10px;
+  position: fixed;
+  height: 100vh;
+  width: 220px;
+  grid-template-rows: 92px 1fr 90px;
+  grid-template-areas:
+    'upper-logo'
+    'navigation-links'
+    'bottom-settings-link'
+
+  ;
+
+
+  .sidenavbar-grid-upper-logo {
+    grid-area: upper-logo;
+    display: flex;
+  }
+
+  .sidenavbar-grid-navigation-links {
+    grid-area: navigation-links;
+    width: 220px;
+    height: 48px;
+    height: 100%;
+
+    .svg-icon-div-position {
+      // display: flex;
+      // padding: 20px;
+      // margin-right: 20px;
+      height: 24px;
+    }
+
+    .svg-icon-position {
+      // display: flex;
+      // padding: 20px;
+
+    }
+
+    .svg-div-component {
+      // display: flex;
+      height: 24px;
+      transition: all 0.2s;
+      // transform-origin: 50% 50%;
+    }
+
+    .svg-div-component:hover {
+      transform: scale(1.05);
+    }
+
+    a {
+
+      transition: background-color 0.4s ease;
+      /* Smooth transition */
+
+    }
+
+    a:hover {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+
+      svg {
+        transform: scale(1.05);
+      }
+
+    }
+
+  }
+
+  .sidenavbar-grid-bottom-settings-link {
+    grid-area: bottom-settings-link;
+    align-items: center;
+    bottom: 11px;
+    padding: 12px;
+    margin: 4px 0px;
+    transition: background-color 0.4s ease;
+
+    .svg-icon-div-position:hover {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+
+    }
+
+    a {
+
+      transition: background-color 0.4s ease;
+      /* Smooth transition */
+
+    }
+
+    a:hover {
+      background-color: #f0f0f0;
+      border-radius: 5px;
+
+      svg {
+        transform: scale(1.05);
+      }
+
+    }
+  }
+
+  .navigation-link a {
+    display: flex;
+    // transition: background-color 0.3s ease;
+    /* Smooth transition */
+    margin: 4px 0;
+    padding: 12px;
+
+  }
+
+}

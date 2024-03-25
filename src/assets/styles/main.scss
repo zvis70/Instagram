@@ -18,11 +18,20 @@
 @import "views/AboutUs";
 @import "views/StoryIndex";
 @import "views/StoryDetails";
+@import "views/CreateStory";
+
 
 
 // Components
 @import "cmps/AppHeader";
 @import "cmps/AppFooter";
+@import "cmps/SideNavBar";
+@import "cmps/TopReels";
+@import "cmps/MenuModal";
+@import "cmps/_dynamic-modal";
+
+
+
 
 
 
